@@ -1,0 +1,489 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Русский (Россия) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\alggen.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Algorithm Generator"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    LTEXT           "Algorithm Generator.  Version 1.03",IDC_STATIC,16,14,119,8,SS_NOPREFIX
+    LTEXT           "(c) Igor Antonov 2004-2023 ",IDC_STATIC,15,28,140,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+    LTEXT           "The original DLL module solves the task of sorting an array of numbers in memory.",IDC_ABOUT,15,40,213,45
+END
+
+IDD_ALGGEN_DIALOG DIALOGEX 0, 0, 261, 215
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "alggen"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Exit",IDOK,175,168,56,14
+    PUSHBUTTON      "Start",IDC_BUTTON1,175,50,56,14
+    EDITTEXT        IDC_EDIT2,27,4,112,183,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY
+    LTEXT           "Status: ",IDC_STATUS,3,190,252,18
+    PUSHBUTTON      "Sample",IDC_BUTTON2,175,108,56,14
+    PUSHBUTTON      "Next",IDC_BUTTON4,205,31,26,14
+    PUSHBUTTON      "Test",IDC_TEST,175,128,56,14
+    PUSHBUTTON      "Test All",IDC_TEST_ALL,175,148,56,14
+    PUSHBUTTON      "View CPU",IDC_VIEW_CPU,175,88,56,14
+    PUSHBUTTON      "List",IDC_LIST,175,11,56,14
+    PUSHBUTTON      "Step",IDC_STEP,175,69,56,14
+    PUSHBUTTON      "Prev",IDC_BUTTON5,175,31,25,14
+END
+
+IDD_PROGRAM_LENGTH DIALOG 0, 0, 199, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Generator settings"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,147,7,46,14
+    PUSHBUTTON      "Cancel",IDCANCEL,147,34,46,14
+    EDITTEXT        IDC_EDIT1,103,7,18,13,ES_AUTOHSCROLL
+    LTEXT           "Program length",IDC_STATIC,20,7,68,11
+    EDITTEXT        IDC_EDIT2,103,35,38,13,ES_AUTOHSCROLL
+    LTEXT           "Population size",IDC_STATIC,20,36,71,12
+END
+
+IDD_EDIT_PROGRAM DIALOG 0, 0, 246, 143
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add command"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,169,62,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,169,89,50,14
+    LISTBOX         IDC_LIST1,13,29,53,99,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,72,29,43,99,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST3,120,29,44,99,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT1,173,28,28,12,ES_AUTOHSCROLL
+    LTEXT           "    Command            Operand 1      Operand 2       Label",IDC_STATIC,14,13,200,9
+END
+
+IDD_PROB_SETTINGS DIALOG 0, 0, 199, 109
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Probabilities of commands in  %"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,149,7,32,14
+    PUSHBUTTON      "Cancel",IDCANCEL,149,24,32,14
+    EDITTEXT        IDC_EDIT1,97,7,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT3,97,23,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,97,41,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT5,97,58,37,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT6,97,76,37,12,ES_AUTOHSCROLL
+    LTEXT           "Comparison and transition (if)",IDC_STATIC1,7,7,86,10
+    LTEXT           "Assignment (=)",IDC_STATIC3,19,42,75,10
+    LTEXT           "Arithmetic (add, sub)",IDC_STATIC2,13,24,76,10
+    LTEXT           "Exchange (xchg)",IDC_STATIC4,19,59,76,10
+    LTEXT           "Empty operation (nop)",IDC_STATIC,13,78,82,10
+END
+
+IDD_CPU_VIEW DIALOG 0, 0, 284, 175
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Processor memory"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,113,154,50,14
+    LTEXT           "Static",IDC_STATIC_MEM1,5,20,272,8
+    LTEXT           "Static",IDC_STATIC_MEM2,5,34,272,10
+    LTEXT           "Before program execution",IDC_STATIC,5,7,126,11
+    LTEXT           "Static",IDC_STATIC_REG1,5,50,272,11
+    LTEXT           "After running the program",IDC_STATIC,5,66,107,8
+    LTEXT           "Static",IDC_STATIC_MEM3,5,82,272,10
+    LTEXT           "Static",IDC_STATIC_STATUS,5,138,272,10
+    LTEXT           "Static",IDC_STATIC_MEM4,5,95,272,10
+    LTEXT           "Static",IDC_STATIC_REG2,5,114,272,10
+END
+
+IDD_LIST_PROGRAM DIALOG 0, 0, 409, 202
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "List of population programs"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,347,7,50,14
+    CONTROL         "List1",IDC_LIST1,"SysListView32",LVS_REPORT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,7,329,188
+    COMBOBOX        IDC_COMBO1,347,49,50,59,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Base number",IDC_STATIC,343,38,54,11
+END
+
+IDD_CLEAR_POP DIALOG 0, 0, 272, 50
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,215,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,215,24,50,14
+    LTEXT           "Remove instances with Quality below",IDC_STATIC1,7,17,146,15
+    EDITTEXT        IDC_EDIT1,156,14,37,13,ES_AUTOHSCROLL
+END
+
+IDD_OPT DIALOGEX 0, 0, 182, 142
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Оптимизация"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,125,22,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,125,39,50,14
+    CONTROL         "Without optimization",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,13,17,80,11
+    CONTROL         "By size",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,13,33,70,11
+    CONTROL         "By speed",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,13,50,86,11
+    GROUPBOX        "",IDC_STATIC,7,7,99,61
+    CONTROL         "Remove duplicates",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,78,92,10
+    CONTROL         "Transition Correction",IDC_LABEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,97,92,10
+    CONTROL         "Updating Test Arrays",IDC_ARRAY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,116,156,10
+END
+
+IDD_MUTATION DIALOG 0, 0, 308, 157
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Mutation probabilities"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,91,129,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,129,50,14
+    LTEXT           "Insert",IDC_STATIC1,21,25,66,11
+    EDITTEXT        IDC_EDIT1,104,23,22,13,ES_AUTOHSCROLL
+    LTEXT           "Delete",IDC_STATIC2,21,43,66,11
+    EDITTEXT        IDC_EDIT2,104,41,22,13,ES_AUTOHSCROLL
+    LTEXT           "Replace",IDC_STATIC3,21,61,66,11
+    EDITTEXT        IDC_EDIT3,104,59,22,13,ES_AUTOHSCROLL
+    LTEXT           "Parametric",IDC_STATIC4,21,79,66,11
+    EDITTEXT        IDC_EDIT4,104,78,22,13,ES_AUTOHSCROLL
+    LTEXT           "Translocate",IDC_STATIC5,21,97,66,11
+    EDITTEXT        IDC_EDIT5,104,95,22,13,ES_AUTOHSCROLL
+    GROUPBOX        "Intensity in %",IDC_STATIC,7,7,132,113
+    LTEXT           "1x",IDC_STATIC6,174,25,66,11
+    EDITTEXT        IDC_EDIT6,257,23,22,13,ES_AUTOHSCROLL
+    LTEXT           "2x",IDC_STATIC7,174,43,66,11
+    EDITTEXT        IDC_EDIT7,257,41,22,13,ES_AUTOHSCROLL
+    LTEXT           "3x",IDC_STATIC8,174,61,66,11
+    EDITTEXT        IDC_EDIT8,257,59,22,13,ES_AUTOHSCROLL
+    LTEXT           "4x",IDC_STATIC9,174,79,66,11
+    EDITTEXT        IDC_EDIT9,257,78,22,13,ES_AUTOHSCROLL
+    LTEXT           "5x",IDC_STATIC10,174,97,66,11
+    EDITTEXT        IDC_EDIT10,257,95,22,13,ES_AUTOHSCROLL
+    GROUPBOX        "Multipoint mutations in %",IDC_STATIC,160,7,132,113
+END
+
+IDD_DLL DIALOG 0, 0, 492, 127
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Select test module"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,171,106,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,287,106,50,14
+    LISTBOX         IDC_LIST1,7,7,478,93,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_ALGGEN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 3
+        RIGHTMARGIN, 255
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 208
+    END
+
+    IDD_PROGRAM_LENGTH, DIALOG
+    BEGIN
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_EDIT_PROGRAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 136
+    END
+
+    IDD_PROB_SETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 102
+    END
+
+    IDD_CPU_VIEW, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 277
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_LIST_PROGRAM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 397
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_CLEAR_POP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 265
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 43
+    END
+
+    IDD_OPT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 175
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_MUTATION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 301
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 150
+    END
+
+    IDD_DLL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 485
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU
+BEGIN
+    POPUP "Population"
+    BEGIN
+        MENUITEM "Create",                      IDM_MAKE_POPULATION
+        MENUITEM "Save",                        IDM_SAVE_POPULATION
+        MENUITEM "Load",                        IDM_LOAD_POPULATION
+        MENUITEM "Merge",                       IDM_MERGE_POPULATIONS
+        MENUITEM "Sort",                        IDM_SORT_POPULATION
+        MENUITEM "Selection",                   IDM_CLEAR_POP
+        MENUITEM "Cut",                         IDM_CUT
+        MENUITEM "Reset",                       IDM_NULL
+        MENUITEM "Report",                      IDM_HIST
+    END
+    POPUP "Program"
+    BEGIN
+        MENUITEM "Create",                      IDM_MAKE_PROGRAM
+        MENUITEM "Remove",                      IDM_REMOVE_PROGRAM
+        MENUITEM "Add Command",                 IDM_ADD_COMMAND
+        MENUITEM "Remove Command",              IDM_REMOVE_COMMAND
+    END
+    POPUP "Settings"
+    BEGIN
+        MENUITEM "Select test",                 IDM_SELECTTEST
+        MENUITEM "Save settings",               IDM_SAVE_CONFIG
+        MENUITEM "Load settings",               IDM_LOAD_CONFIG
+        MENUITEM "Command probabilities",       IDM_PROB_SETTINGS
+        MENUITEM "Mutation probabilities",      IDM_MUTATION
+        MENUITEM "Population size",             IDM_PORGRAM_LENGTH
+        MENUITEM "Optimization",                IDM_OPT
+    END
+END
+
+IDR_MENU2 MENU
+BEGIN
+    MENUITEM "Work...",                     65535
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_ABOUTBOX AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+IDD_OPT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // Русский (Россия) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Английский (США) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "FileDescription", "Algorithm Generator"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "alggen"
+            VALUE "LegalCopyright", "(c) Igor Antonov 2004-2023"
+            VALUE "OriginalFilename", "alggen.exe"
+            VALUE "ProductName", "Algorithm Generator"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "&About alggen..."
+END
+
+#endif    // Английский (США) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
